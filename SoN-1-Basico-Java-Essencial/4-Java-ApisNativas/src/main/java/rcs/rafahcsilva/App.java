@@ -12,10 +12,18 @@ import rcs.rafahcsilva.public_code.Public;
 public class App {
     public static void main(String[] args) {
         System.out.println("Hello World!");
+
+        // Encapsulamento
         new Public();
         new Private();
         new Protected();
         new Second();
         new Default();
+
+        // Java.Lang - Object
+        Public pub = new Public();
+        Object obj = new Object();
+        System.out.println(obj.toString());
+        System.out.println(pub.toString());
     }
 }
