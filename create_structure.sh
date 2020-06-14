@@ -3,7 +3,7 @@
 mkdir -p SoN-1-Basico-Java-Essencial
 mkdir -p SoN-1-Basico-Java-Essencial/1-Iniciando-com-Java
 mkdir -p SoN-1-Basico-Java-Essencial/2-Java-OO
-mkdir -p SoN-1-Basico-Java-Essencial/3-Estrutura-de-Dados-com-Java
+mkdir -p SoN-1-Basico-Java-Essencial/3-Java-ED
 mkdir -p SoN-1-Basico-Java-Essencial/4-Apis-Nativas-no-Java
 mkdir -p SoN-1-Basico-Java-Essencial/5-Java-JDBC
 mkdir -p SoN-1-Basico-Java-Essencial/6-Java-Swing
