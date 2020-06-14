@@ -6,9 +6,7 @@ import rcs.rafahcsilva.protected_code.Protected;
 import rcs.rafahcsilva.protected_code.Second;
 import rcs.rafahcsilva.public_code.Public;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
+import java.io.*;
 import java.lang.annotation.Annotation;
 
 /**
@@ -71,10 +69,43 @@ public class App {
             fos.flush();
             fos.close();
             System.out.println("Write Done!");
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+
+        // Java IO - BufferedRead
+        BufferedReader br;
+        BufferedInputStream bis;
+        FileInputStream fis;
+        String currentLine;
+        try {
+            br = new BufferedReader(new FileReader("test.txt"));
+            System.out.println("Reading files:");
+            while ((currentLine = br.readLine()) != null) {
+                System.out.println(currentLine);
+            }
+            br.close();
+            System.out.println("Buffer Read Done!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
+        // Java IO - FileInputStream
+        try {
+            System.out.println("Preparing to read...");
+            fis = new FileInputStream(file);
+            bis = new BufferedInputStream(fis);
+            DataInputStream dis = new DataInputStream(bis);
+            while (dis.available() != 0) {
+                System.out.println(dis.readLine());
+            }
+            fis.close();
+            bis.close();
+            dis.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
