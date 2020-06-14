@@ -20,10 +20,18 @@ public class App {
         new Second();
         new Default();
 
+
         // Java.Lang - Object
         Public pub = new Public();
         Object obj = new Object();
         System.out.println(obj.toString());
         System.out.println(pub.toString());
+
+
+        // Java.Lang - Wrappers
+        Integer one = 1;
+        int two = 2;
+        Double d1 = 0.0;
+        String str1 = d1.toString();
     }
 }
