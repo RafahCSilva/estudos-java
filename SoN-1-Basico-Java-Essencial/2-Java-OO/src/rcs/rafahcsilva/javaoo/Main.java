@@ -14,5 +14,8 @@ public class Main {
         System.out.println(Person.walk());
 
         System.out.println("Name: " + person.name);
+
+        Person person2 = new Person("Cardoso", 50);
+        System.out.println("Name: " + person2.name);
     }
 }
