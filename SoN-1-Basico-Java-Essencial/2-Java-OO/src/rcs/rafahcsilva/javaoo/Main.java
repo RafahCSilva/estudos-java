@@ -25,5 +25,13 @@ public class Main {
 
         Car car2 = new Car("Red", 190.0);
         System.out.println(car2.getColor() + " " + car2.getTopSpeed());
+
+
+        // Composition
+        CarComposition carComposition = new CarComposition();
+        carComposition.getVehicle().setColor("Green");
+        carComposition.getVehicle().setTopSpeed(250.0);
+        System.out.println(carComposition.getVehicle().getColor() + " " + carComposition.getVehicle().getTopSpeed());
+
     }
 }
