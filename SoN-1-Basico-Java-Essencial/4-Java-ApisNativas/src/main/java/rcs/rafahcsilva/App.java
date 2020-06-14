@@ -6,6 +6,8 @@ import rcs.rafahcsilva.protected_code.Protected;
 import rcs.rafahcsilva.protected_code.Second;
 import rcs.rafahcsilva.public_code.Public;
 
+import java.io.File;
+import java.io.IOException;
 import java.lang.annotation.Annotation;
 
 /**
@@ -43,6 +45,19 @@ public class App {
             Annotation annotation = pubClass.getAnnotation(Info.class);
             Info info = (Info) annotation;
             System.out.println("@Info eh " + info.createdBy());
+        }
+
+
+        // Java.IO - File
+        File file = new File("test.txt");
+        try {
+            if (file.createNewFile()) {
+                System.out.println("FIle is Created");
+            } else {
+                System.out.println("File already exists");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
