@@ -55,7 +55,7 @@ public class Person implements IPerson {
 
     @Override
     public void method1() {
-        
+
     }
 
     @Override

@@ -44,5 +44,11 @@ public class Main {
 
         Vehicle vehicle3 = new Vehicle();
         vehicle3.methodOverriding();
+
+        // Abstract Classes
+        Dog dog = new Dog();
+        dog.makeNoise();
+        Cat cat = new Cat();
+        cat.makeNoise();
     }
 }
