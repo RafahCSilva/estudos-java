@@ -38,3 +38,7 @@ https://www.schoolofnet.com/plano-de-estudo-spring-boot-developer/
 4. Criando um Helpdesk com SpringBoot e MySQL
 
 
+## Requires
+````bash
+choco install jre8 jdk8 maven -y
+````
