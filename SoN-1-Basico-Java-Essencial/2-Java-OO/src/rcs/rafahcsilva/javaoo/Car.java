@@ -18,4 +18,8 @@ public class Car extends Vehicle {
     public void setShifts(Integer shifts) {
         this.shifts = shifts;
     }
+
+    public void methodOverriding() {
+        System.out.println("This is a method form Child Class overriding");
+    }
 }

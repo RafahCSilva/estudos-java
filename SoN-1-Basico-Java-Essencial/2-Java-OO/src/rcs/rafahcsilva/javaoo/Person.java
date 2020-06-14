@@ -44,4 +44,12 @@ public class Person {
     public static String walk() {
         return "I'm walking...";
     }
+
+    public String walk(String msg) {
+        return msg;
+    }
+
+    public String walk(String msg, Integer number) {
+        return msg + " " + number.toString();
+    }
 }

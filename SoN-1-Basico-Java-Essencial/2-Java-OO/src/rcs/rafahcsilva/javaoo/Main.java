@@ -33,5 +33,16 @@ public class Main {
         carComposition.getVehicle().setTopSpeed(250.0);
         System.out.println(carComposition.getVehicle().getColor() + " " + carComposition.getVehicle().getTopSpeed());
 
+
+        // OverLoad
+        Person person3 = new Person();
+        System.out.println(person3.walk("I'm walking."));
+        System.out.println(person3.walk("I'm polymorphism..", 2));
+
+        Car car3 = new Car("Yellow", 210.0);
+        car3.methodOverriding();
+
+        Vehicle vehicle3 = new Vehicle();
+        vehicle3.methodOverriding();
     }
 }

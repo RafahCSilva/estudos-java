@@ -27,4 +27,8 @@ public class Vehicle {
     public void setTopSpeed(Double topSpeed) {
         this.topSpeed = topSpeed;
     }
+
+    public void methodOverriding(){
+        System.out.println("This is a method form Father Class overriding");
+    }
 }
