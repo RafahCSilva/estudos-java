@@ -7,6 +7,8 @@ public class OpMethod {
         Scanner reader = new Scanner(System.in);
         Double a;
         Double b;
+        String op;
+        Double result = 0.0;
 
         System.out.println("Number A? ");
         a = reader.nextDouble();
@@ -14,7 +16,23 @@ public class OpMethod {
         System.out.println("Number B? ");
         b = reader.nextDouble();
 
-        Double result = sum(a, b);
+        reader.nextLine();
+        System.out.println("Operation (+, -, *, /)? ");
+        op = reader.nextLine();
+
+
+        if (op.equals("+")) {
+            result = sum(a, b);
+        } else if (op.equals("-")) {
+            result = sub(a, b);
+        } else if (op.equals("*")) {
+            result = mul(a, b);
+        } else if (op.equals("/")) {
+            result = div(a, b);
+        } else {
+            System.err.println("Operation not found");
+        }
+
         System.out.println(result);
     }
 
