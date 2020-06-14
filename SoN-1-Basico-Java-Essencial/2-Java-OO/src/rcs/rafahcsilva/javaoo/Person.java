@@ -1,6 +1,6 @@
 package rcs.rafahcsilva.javaoo;
 
-public class Person {
+public class Person implements IPerson {
     private String name;
     private Integer age;
     private String cpf;
@@ -51,5 +51,20 @@ public class Person {
 
     public String walk(String msg, Integer number) {
         return msg + " " + number.toString();
+    }
+
+    @Override
+    public void method1() {
+        
+    }
+
+    @Override
+    public void method2() {
+
+    }
+
+    @Override
+    public void method3() {
+
     }
 }
