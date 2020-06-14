@@ -7,6 +7,7 @@ import rcs.rafahcsilva.protected_code.Second;
 import rcs.rafahcsilva.public_code.Public;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.annotation.Annotation;
 
@@ -50,12 +51,27 @@ public class App {
 
         // Java.IO - File
         File file = new File("test.txt");
+        FileOutputStream fos;
         try {
             if (file.createNewFile()) {
                 System.out.println("FIle is Created");
             } else {
                 System.out.println("File already exists");
             }
+
+            // Java IO - FileOutputStream
+            fos = new FileOutputStream(file);
+            if (!file.exists()) {
+                file.createNewFile();
+            }
+
+            String text = "Hello, my name is Rafao and I'm study Java";
+            byte[] textByte = text.getBytes();
+            fos.write(textByte);
+            fos.flush();
+            fos.close();
+            System.out.println("Write Done!");
+
         } catch (IOException e) {
             e.printStackTrace();
         }
