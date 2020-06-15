@@ -1,9 +1,7 @@
 package rcs.rafahcsilva.java8;
 
 import java.lang.reflect.Array;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -92,5 +90,28 @@ public class Main {
         System.out.println(filteredTexts
                 .stream()
                 .collect(Collectors.joining(", ")));
+
+
+        // Optional
+        List<Person> people = new ArrayList<Person>();
+        Person person1 = new Person("Rafael");
+        Person person2 = new Person("Cardoso");
+        Person person3 = new Person("Silva");
+        Person person4 = new Person(null);
+        people.add(person1);
+        people.add(person2);
+        people.add(person3);
+        people.add(person4);
+        people.forEach(p -> System.out.println(p.getName()));
+
+        // Optional faz um wrapper para tratar o IS_NULL()
+        Optional<Person> op = Optional.of(person1);
+        op.ifPresent(System.out::print);
+        op.ifPresent(p -> System.out.println(p.getName()));
+
+        String name = person4.getName();
+        Optional<String> opName = Optional.ofNullable(name);
+        opName.ifPresent(System.out::print);
+
     }
 }
