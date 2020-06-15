@@ -37,5 +37,10 @@ public class Main {
                 .filter(s -> s.startsWith("C"))
                 .collect(Collectors.toList());
         result.forEach(System.out::println);
+
+
+        // Method References - For only Static Methods
+        result.forEach(s -> Person.say(s));
+        result.forEach(Person::say);
     }
 }
