@@ -5,6 +5,8 @@ plugins {
 group 'rcs.rafahcsilva.java8'
 version '1.0-SNAPSHOT'
 
+sourceCompatibility = '1.8'
+
 repositories {
     mavenCentral()
 }
