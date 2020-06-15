@@ -3,6 +3,7 @@ package rcs.rafahcsilva.java8;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -62,5 +63,34 @@ public class Main {
 
         // Interface with implementation body
         myInterface1.body1();
+
+
+        // Stream => Collections with Fluent API
+        // filtering
+        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+        List<Integer> filteredNumbers = numbers.stream()
+                .filter(n -> n % 2 == 0)
+                .collect(Collectors.toList());
+        filteredNumbers.forEach(System.out::println);
+
+        // In parallel
+        List<String> texts = Arrays.asList("a", "b", "", "", "c", "d");
+        List<String> filteredTexts = texts.parallelStream()
+                .filter(s -> !s.isEmpty())
+                //.limit(2)
+                .collect(Collectors.toList());
+        filteredTexts.forEach(System.out::println);
+
+        // limit and sort
+        Random hash = new Random();
+        hash.doubles()
+                .limit(3)
+                .sorted()
+                .forEach(System.out::println);
+
+        // Concat
+        System.out.println(filteredTexts
+                .stream()
+                .collect(Collectors.joining(", ")));
     }
 }
