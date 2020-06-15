@@ -3,9 +3,13 @@ package rcs.rafahcsilva.java8;
 import java.lang.reflect.Array;
 import java.util.*;
 import java.util.stream.Collectors;
+import java.time.Duration;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.Period;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         System.out.println("Hi Java 8");
 
         // Runnable
@@ -112,6 +116,26 @@ public class Main {
         String name = person4.getName();
         Optional<String> opName = Optional.ofNullable(name);
         opName.ifPresent(System.out::print);
+
+
+        // Api of Date-Time => Carbon no Java
+        Instant now = Instant.now();
+        System.out.println(now);
+
+        Thread.sleep(1000);
+        Instant now2 = Instant.now();
+
+        Duration dur = Duration.between(now, now2);
+        System.out.println("Duration: " + dur.getSeconds());
+
+        LocalDate local = LocalDate.now();
+        System.out.println(local);
+
+        LocalDate birthday = LocalDate.of(1994, 4, 9);
+        Period period = Period.between(birthday, local);
+        System.out.printf("My Age is %s %s %s", period.getYears(), period.getMonths(), period.getDays());
+
+        local.plusDays(1);
 
     }
 }
