@@ -42,5 +42,25 @@ public class Main {
         // Method References - For only Static Methods
         result.forEach(s -> Person.say(s));
         result.forEach(Person::say);
+
+
+        // Functional annotations
+        // In Java 7 - new and need implements the method body for this instance
+        MyInterface myInterface = new MyInterface() {
+            @Override
+            public void print(String s) {
+                System.out.println("Java 7 implementation for Function Interface");
+            }
+        };
+        myInterface.print("");
+
+        // In Java 8 - method body with a lambda
+        MyInterface myInterface1 = (s) -> System.out.println("Java 8 implementation for Function Interface " + s);
+        myInterface1.print("");
+
+        result.forEach(myInterface1::print);
+
+        // Interface with implementation body
+        myInterface1.body1();
     }
 }
