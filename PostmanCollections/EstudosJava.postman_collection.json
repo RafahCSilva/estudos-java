@@ -1,46 +1,74 @@
 {
-  "info": {
-    "_postman_id": "b79e6b9b-59b9-4032-98c6-4b5882e621a6",
-    "name": "EstudosJava",
-    "description": "Meus Estudos de Java Spring",
-    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "SpringGradle",
-      "item": [
-        {
-          "name": "HelloWorld::sayHelloPost",
-          "request": {
-            "method": "POST",
-            "header": [],
-            "body": {
-              "mode": "raw",
-              "raw": "{\n\t\"name\": \"rafao\"\n}",
-              "options": {
-                "raw": {
-                  "language": "json"
-                }
-              }
-            },
-            "url": {
-              "raw": "http://localhost:8080/post",
-              "protocol": "http",
-              "host": [
-                "localhost"
-              ],
-              "port": "8080",
-              "path": [
-                "post"
-              ]
-            }
-          },
-          "response": []
-        }
-      ],
-      "description": "SoN-3-Avancado-Spring-Boot -> 1-Iniciando-com-SpringBoot-Rev3",
-      "protocolProfileBehavior": {}
-    }
-  ],
-  "protocolProfileBehavior": {}
+	"info": {
+		"_postman_id": "b79e6b9b-59b9-4032-98c6-4b5882e621a6",
+		"name": "EstudosJava",
+		"description": "Meus Estudos de Java Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SpringGradle",
+			"item": [
+				{
+					"name": "HelloWorld::sayHelloPost",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"rafao\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car::create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Fusca\",\r\n    \"year\": \"1900\",\r\n    \"color\": \"blue\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "SoN-3-Avancado-Spring-Boot -> 1-Iniciando-com-SpringBoot-Rev3",
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
 }
