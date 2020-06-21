@@ -1,6 +1,7 @@
 package rcs.rafahcsilva.RestAPI.resources;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import rcs.rafahcsilva.RestAPI.models.Product;
 import rcs.rafahcsilva.RestAPI.services.ProductService;
@@ -22,31 +23,35 @@ public class ProductResource {
 
     @GetMapping
     @ResponseBody
+    @ResponseStatus(code = HttpStatus.OK)
     public List<Product> findAll() {
         return this.productService.findAll();
     }
 
     @GetMapping("/{id}")
     @ResponseBody
+    @ResponseStatus(code = HttpStatus.OK)
     public Optional<Product> findById(@PathVariable("id") Long id) {
         return this.productService.find(id);
     }
 
     @PostMapping
     @ResponseBody
+    @ResponseStatus(code = HttpStatus.CREATED)
     public Product create(@RequestBody Product product) {
         return this.productService.create(product);
     }
 
     @PutMapping("/{id}")
     @ResponseBody
+    @ResponseStatus(code = HttpStatus.OK)
     public Product update(@PathVariable("id") Long id, @RequestBody Product product) {
         return this.productService.update(id, product);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable("id") Long id, HttpServletResponse response) {
+    @ResponseStatus(code = HttpStatus.NO_CONTENT)
+    public void delete(@PathVariable("id") Long id) {
         this.productService.delete(id);
-        response.setStatus(HttpServletResponse.SC_NO_CONTENT);
     }
 }
