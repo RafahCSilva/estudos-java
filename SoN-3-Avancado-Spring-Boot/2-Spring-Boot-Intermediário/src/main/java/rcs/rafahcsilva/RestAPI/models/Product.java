@@ -1,6 +1,13 @@
 package rcs.rafahcsilva.RestAPI.models;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.br.CPF;
+
 import javax.persistence.*;
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.util.Date;
 
 @Entity
@@ -12,9 +19,13 @@ public class Product {
     private Long id;
 
     @Column
+    @NotEmpty(message = "Name can't be empty")
+    @Length(min = 4, max = 255)
     private String name;
 
     @Column
+    @Min(value = 0)
+    @Max(value = 1000)
     private Integer quantity;
 
     @Column
