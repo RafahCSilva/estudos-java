@@ -55,5 +55,5 @@
 
 ## Requires
 ````bash
-choco install jre8 jdk8 maven -y
+choco install jre8 jdk8 openjdk14 maven -y
 ````
