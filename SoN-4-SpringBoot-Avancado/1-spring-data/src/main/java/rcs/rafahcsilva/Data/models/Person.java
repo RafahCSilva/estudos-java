@@ -13,6 +13,10 @@ public class Person {
     @Column
     private String name;
 
+    @ManyToOne
+    @JoinColumn(name = "event_id")
+    private Event eventId;
+
     public Person() {
     }
 
@@ -40,4 +44,13 @@ public class Person {
     public void setName(String name) {
         this.name = name;
     }
+
+    public Event getEventId() {
+        return eventId;
+    }
+
+    public void setEventId(Event eventId) {
+        this.eventId = eventId;
+    }
+
 }

@@ -24,7 +24,7 @@ public class DataSourceConfig {
     }
 
     @Bean
-    public JpaVendorAdapter jpaVendorAdapter(){
+    public JpaVendorAdapter jpaVendorAdapter() {
         HibernateJpaVendorAdapter adapter = new HibernateJpaVendorAdapter();
         adapter.setDatabase(Database.MYSQL);
         adapter.setShowSql(true);

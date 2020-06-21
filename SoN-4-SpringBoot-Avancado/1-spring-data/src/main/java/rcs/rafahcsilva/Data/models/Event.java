@@ -1,6 +1,7 @@
 package rcs.rafahcsilva.Data.models;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "events")
@@ -15,6 +16,10 @@ public class Event {
 
     @Column
     private Double value;
+
+    @Column
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "eventId")
+    private Set<Person> people;
 
     public Event() {
     }
@@ -47,5 +52,13 @@ public class Event {
 
     public void setValue(Double value) {
         this.value = value;
+    }
+
+    public Set<Person> getPeople() {
+        return people;
+    }
+
+    public void setPeople(Set<Person> people) {
+        this.people = people;
     }
 }
