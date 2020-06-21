@@ -4,6 +4,8 @@
 
 [schoolofnet.com](https://www.schoolofnet.com/)
 
+[github.com/schoolofnetcom](https://github.com/schoolofnetcom)
+
 - **SoN-1-Java-Essencial** [link](https://www.schoolofnet.com/plano-de-estudo-java-essencial/)
     - [x] 1-Iniciando com Java [link](https://www.schoolofnet.com/curso/java/linguagem-java/java-se-rev2/)
     - [x] 2-Orientação a Objetos com Java [link](https://www.schoolofnet.com/curso/java/linguagem-java/orientacao-objetos-com-java/)
@@ -13,7 +15,7 @@
     - [ ] 6-Java Swing
     - [ ] 7-Iniciando com Java FX
     - [x] 8-Java 8 [link](https://www.schoolofnet.com/curso/java/linguagem-java/java-8/)
-    - [ ] 9-Novidades Java 8 para Java 13 [link](https://www.schoolofnet.com/curso/java/linguagem-java/novidades-java-8-para-java-13/)
+    - [x] 9-Novidades Java 8 para Java 13 [link](https://www.schoolofnet.com/curso/java/linguagem-java/novidades-java-8-para-java-13/)
 
 
 - **SoN-2-Java-BD** [link](https://www.schoolofnet.com/plano-de-estudo-java-e-banco-de-dados/)
