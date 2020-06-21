@@ -35,4 +35,21 @@ public class CarController {
     public Car create(@RequestBody Car car) {
         return this.carRepository.save(car);
     }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.NO_CONTENT)
+    public void updateById(@PathVariable("id") Long id, @RequestBody Car car) {
+        this.carRepository.findById(id).map(car1 -> {
+            car1.setName(car.getName());
+            car1.setYear(car.getYear());
+            car1.setColor(car.getColor());
+            return this.carRepository.save(car1);
+        });
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(code = HttpStatus.NO_CONTENT)
+    public void removeById(@PathVariable("id") Long id) {
+        this.carRepository.deleteById(id);
+    }
 }
