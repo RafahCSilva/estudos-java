@@ -22,5 +22,19 @@ public class App {
         Stream.iterate(2, number -> number * 2)
                 .limit(40)
                 .forEach(n -> System.out.println(n));
+
+
+        // Strings
+        String stg = "Hello \n" + "World";
+        System.out.println(stg);
+
+        String multiline = """
+                Hello
+                World
+                """;
+        System.out.println(multiline);
+
+        Stream<String> lines = multiline.lines();
+        lines.forEach(System.out::println);
     }
 }
