@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "SpringGradle",
+			"name": "SoN-3-1-Iniciando-com-SpringBoot-Rev3",
 			"item": [
 				{
 					"name": "HelloWorld::sayHelloPost",
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Fusca\",\r\n    \"year\": \"1900\",\r\n    \"color\": \"blue\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Mitsubishi\",\r\n    \"year\": 2019,\r\n    \"color\": \"green\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -60,6 +60,45 @@
 							"port": "8080",
 							"path": [
 								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car::findAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cars",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Car::findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cars/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cars",
+								"3"
 							]
 						}
 					},
