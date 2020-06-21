@@ -1,5 +1,7 @@
 package rcs.rafahcsilva.RestAPI.resources;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
+@Api(value = "API REST = Model Product")
 @RestController
 @RequestMapping("/products")
 public class ProductResource {
@@ -25,6 +28,7 @@ public class ProductResource {
         this.productService = productService;
     }
 
+    @ApiOperation(value = "Find all Products in Database", produces = "application/json")
     @GetMapping
     @ResponseBody
     @ResponseStatus(code = HttpStatus.OK)
@@ -35,6 +39,7 @@ public class ProductResource {
         );
     }
 
+    @ApiOperation(value = "Find by ID Products in Database")
     @GetMapping("/{id}")
     @ResponseBody
     @ResponseStatus(code = HttpStatus.OK)
@@ -45,6 +50,7 @@ public class ProductResource {
         );
     }
 
+    @ApiOperation(value = "Create a new Product")
     @PostMapping
     @ResponseBody
     @ResponseStatus(code = HttpStatus.CREATED)
@@ -65,6 +71,7 @@ public class ProductResource {
         );
     }
 
+    @ApiOperation(value = "Update a Product by ID")
     @PutMapping("/{id}")
     @ResponseBody
     @ResponseStatus(code = HttpStatus.OK)
@@ -85,6 +92,7 @@ public class ProductResource {
         );
     }
 
+    @ApiOperation(value = "Delete a Product by ID")
     @DeleteMapping("/{id}")
     @ResponseStatus(code = HttpStatus.NO_CONTENT)
     public void delete(@PathVariable("id") Long id) {
