@@ -3,6 +3,7 @@ package rcs.rafahcsilva.Data.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.web.bind.annotation.*;
 import rcs.rafahcsilva.Data.models.Event;
 import rcs.rafahcsilva.Data.repository.EventRepository;
@@ -23,6 +24,12 @@ public class EventController {
     @ResponseBody
     public Page<Event> findAll(Pageable pageable) {
         return (Page<Event>) this.eventRepository.findAll(pageable);
+    }
+
+    @GetMapping("/sort")
+    @ResponseBody
+    public List<Event> findByAllSorting() {
+        return (List<Event>) this.eventRepository.findAll(Sort.by(Sort.Direction.DESC, "name"));
     }
 
     @PostMapping

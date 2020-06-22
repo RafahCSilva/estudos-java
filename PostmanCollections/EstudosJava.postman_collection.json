@@ -365,6 +365,51 @@
 					"response": []
 				},
 				{
+					"name": "events.index Sorteable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/events?sort=name,desc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events"
+							],
+							"query": [
+								{
+									"key": "sort",
+									"value": "name,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "events.index Sorteable 2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/events/sort",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events",
+								"sort"
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "events.create",
 					"request": {
 						"method": "POST",

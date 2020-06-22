@@ -32,7 +32,7 @@
 
 
 - **SoN-4-SpringBoot-Avancado**
-    - [ ] 1-Avançando com spring boot - spring data [link](https://www.schoolofnet.com/curso/java/springboot/avancando-com-spring-boot-spring-data/)
+    - [x] 1-Avançando com spring boot - spring data [link](https://www.schoolofnet.com/curso/java/springboot/avancando-com-spring-boot-spring-data/)
     - [ ] 2-Avançando com Spring - Spring Data Rest [link](https://www.schoolofnet.com/curso/java/spring/spring-data-rest/)
     - [ ] 3-Iniciando com Testes com SpringBoot [link](https://www.schoolofnet.com/curso/java/springboot/testes-unitarios-com-java-e-junit/)
     - [ ] 4-Iniciando com Spring Hateoas [link](https://www.schoolofnet.com/curso/java/spring/iniciando-com-spring-hateoas/)
