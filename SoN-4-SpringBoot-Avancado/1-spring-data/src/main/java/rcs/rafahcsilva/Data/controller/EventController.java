@@ -1,6 +1,8 @@
 package rcs.rafahcsilva.Data.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import rcs.rafahcsilva.Data.models.Event;
 import rcs.rafahcsilva.Data.repository.EventRepository;
@@ -19,8 +21,8 @@ public class EventController {
 
     @GetMapping
     @ResponseBody
-    public List<Event> findAll() {
-        return (List<Event>) this.eventRepository.findAll();
+    public Page<Event> findAll(Pageable pageable) {
+        return (Page<Event>) this.eventRepository.findAll(pageable);
     }
 
     @PostMapping
