@@ -1,6 +1,8 @@
 package rcs.rafahcsilva.Data.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
 import rcs.rafahcsilva.Data.models.Event;
 import rcs.rafahcsilva.Data.models.Person;
@@ -26,7 +28,7 @@ public class PersonController {
 
     @GetMapping
     @ResponseBody
-    public List<Person> findAll(@PathVariable("eventId") Long eventId) {
+    public Page<Person> findAll(@PathVariable("eventId") Long eventId, Pageable pageable) {
         // people direta
         // return (List<Person>) this.personRepository.findAll();
 
@@ -40,7 +42,10 @@ public class PersonController {
         // return (List<Person>) event.get().getPeople();
 
         // cast from collection
-        return event.get().getPeople().stream().collect(Collectors.toList());
+        // return event.get().getPeople().stream().collect(Collectors.toList());
+
+        // Pageable
+        return this.personRepository.findByEventId(event.get(), pageable);
     }
 
     @PostMapping

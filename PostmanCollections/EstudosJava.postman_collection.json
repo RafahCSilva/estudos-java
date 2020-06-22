@@ -336,7 +336,7 @@
 					"response": []
 				},
 				{
-					"name": "events.index Page",
+					"name": "events.index Pageable",
 					"request": {
 						"method": "GET",
 						"header": [],
@@ -408,6 +408,37 @@
 								"events",
 								"1",
 								"people"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "people.index Pageable",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/events/10/people?page=1&size=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"events",
+								"10",
+								"people"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "3"
+								}
 							]
 						}
 					},
