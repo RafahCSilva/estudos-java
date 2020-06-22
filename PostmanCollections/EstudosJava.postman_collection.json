@@ -369,13 +369,15 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/people",
+							"raw": "http://localhost:8080/events/1/people",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"events",
+								"1",
 								"people"
 							]
 						}
@@ -389,7 +391,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Person 1\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Person in Event 1\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -397,13 +399,15 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8080/people",
+							"raw": "http://localhost:8080/events/1/people",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
+								"events",
+								"1",
 								"people"
 							]
 						}

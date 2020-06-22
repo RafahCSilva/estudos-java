@@ -1,5 +1,7 @@
 package rcs.rafahcsilva.Data.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import javax.persistence.*;
 
 @Entity
@@ -15,6 +17,7 @@ public class Person {
 
     @ManyToOne
     @JoinColumn(name = "event_id")
+    @JsonBackReference
     private Event eventId;
 
     public Person() {
@@ -23,6 +26,17 @@ public class Person {
     public Person(Long id, String name) {
         this.id = id;
         this.name = name;
+    }
+
+    public Person(Long id, String name, Event eventId) {
+        this.id = id;
+        this.name = name;
+        this.eventId = eventId;
+    }
+
+    public Person(String name, Event eventId) {
+        this.name = name;
+        this.eventId = eventId;
     }
 
     public Person(String name) {
